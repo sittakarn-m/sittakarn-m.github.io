@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>บทเรียน HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Itim', cursive;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #00796b;
+        }
+
+        section {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        code {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            display: block;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .run-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            background-color: #4db6ac;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .run-button:hover {
+            background-color: #00897b;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            font-family: monospace;
+            font-size: 1em;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: #999;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🧱 บทเรียน HTML เบื้องต้น</h1>
+        <p>มาดูกันว่า HTML คืออะไร และเราจะใช้มันสร้างเว็บได้อย่างไร!</p>
+    </header>
+
+    <section>
+        <h2>1. HTML คืออะไร?</h2>
+        <p>HTML ย่อมาจาก <b>HyperText Markup Language</b> เป็นภาษาที่ใช้สร้างโครงสร้างของเว็บไซต์</p>
+    </section>
+
+    <section>
+        <h2>2. Basic HTML</h2>
+
+        <h3>Headings : &lt;h1-h6&gt;</h3>
+        <code>
+            &lt;h1&gt;HTML!&lt;/h1&gt; 
+        </code>
+        <h3>Paragraph : &lt;p&gt;</h3>
+        <code>
+            &lt;p&gt;Mr.Robinson May!&lt;/p&gt;
+        </code>
+        <h3>Links : &lt;a&gt;</h3>
+        <code>
+            &lt;a href="https//www.google.com"&gt;google.com&lt;/a&gt; 
+        </code>
+        <h3>Images : &lt;p&gt;</h3>
+        <code>
+            &lt;img src="google_pic.png" alt="google_logo" width="50" height="50"&gt;
+        </code>
+        <h3>Buttons : &lt;p&gt;</h3>
+        <code>
+            <pre>
+&lt;button onclick= myFunction()&gt;Click me!&lt;/button&gt;
+                
+&lt;script&gt; 
+    function myFunction() {
+        alert("Hello! I am an alert box!");
+    }
+&lt;/script&gt;
+            </pre>
+        </code>
+        <h3>Lists : &lt;ul&gt; &lt;li&gt; , &lt;ol&gt; &lt;li&gt;</h3>
+        <code>
+            <pre>
+&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt; 
+            </pre>
+        </code>
+        <h3>Table : &lt;table&gt; &lt;tr&gt; &lt;th&gt;, &lt;tr&gt; &lt;td&gt;</h3>
+        <code>
+            <pre>
+&lt;/head&gt;
+&lt;style&gt;
+table, tr, th, td {
+width: 200px;
+height: 20px;
+text-align:center;
+border: 1px solid black;
+border-collapse: collapse;
+
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+
+&lt;table style="border: 1px;"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;name&lt;/th&gt;
+    &lt;th&gt;class&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;Roblox&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Tim&lt;/td&gt;
+    &lt;td&gt;Math&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+        </code>
+
+
+
+    </section>
+
+    <section>
+        <h2>2. โค้ดตัวอย่างแรก</h2>
+        <p>ลองพิมพ์โค้ด HTML ด้านล่าง แล้วกดปุ่ม “ดูผลลัพธ์”</p>
+
+        <textarea id="htmlCode" name="playground">
+<h1>สวัสดีเด็กๆ!</h1>
+<p>ยินดีต้อนรับสู่การเรียน HTML</p>
+        </textarea>
+
+        <button class="run-button" style="margin-bottom: 10px;" onclick="runCode()">ดูผลลัพธ์</button>
+        <iframe id="output"></iframe>
+    </section>
+
+    <footer>💡 อย่าลืมว่า HTML คือโครงกระดูกของเว็บไซต์!</footer>
+
+    <script>
+        function runCode() {
+            const code = document.getElementById('htmlCode').value;
+            const output = document.getElementById('output');
+            output.srcdoc = code;
+        }
+    </script>
+
+</body>
+
+</html>

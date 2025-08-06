@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>สร้างเว็บไซต์ของฉัน</title>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Itim', cursive;
+      background-color: #fff8e1;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #f57c00;
+    }
+
+    textarea {
+      width: 100%;
+      height: 220px;
+      font-family: monospace;
+      font-size: 1em;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .run-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ffb300;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .run-button:hover {
+      background-color: #ff8f00;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>✨ เว็บไซต์ของฉันเอง</h1>
+    <p>เด็ก ๆ ลองสร้างเว็บไซต์ด้วยตัวเองเลยจ้า! ทั้ง HTML และ CSS รวมอยู่ในนี้ได้เลย</p>
+  </header>
+
+  <textarea id="projectCode">
+<!-- ลองใส่โค้ด HTML + CSS ของหนูดูสิ -->
+<style>
+  body {
+    background-color: #e1f5fe;
+    text-align: center;
+    color: #0288d1;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+</style>
+
+<h1>ยินดีต้อนรับ!</h1>
+<p>นี่คือเว็บไซต์ของฉันเอง 🐣</p>
+  </textarea>
+
+  <button class="run-button" onclick="runProject()">ดูเว็บไซต์ของฉัน</button>
+  <iframe id="output"></iframe>
+
+  <footer>🌈 อย่าลืมว่า ไม่มีผิดหรือถูกในการเรียนรู้ ❤️</footer>
+
+  <script>
+    function runProject() {
+      const code = document.getElementById('projectCode').value;
+      document.getElementById('output').srcdoc = code;
+    }
+  </script>
+
+</body>
+</html>
